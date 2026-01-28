@@ -503,10 +503,10 @@ function App() {
         </div>
 
         <div className="relative z-10 h-full flex flex-col justify-end pb-20 md:pb-32 px-6 md:px-12 lg:px-24">
-          <div className="max-w-none">
+          <div className="max-w-none text-center md:text-left">
             <h1
               ref={heroTitleRef}
-              className="font-heading font-bold text-white leading-[0.85] mb-8"
+              className="font-heading font-bold text-white leading-[0.85] mb-8 whitespace-nowrap"
               style={{ fontSize: 'var(--fluid-hero)' }}
             >
               Ul Barachì
@@ -514,13 +514,13 @@ function App() {
 
             <p
               ref={heroSubRef}
-              className="text-white/80 max-w-xl mb-12"
+              className="text-white/80 max-w-xl mb-12 mx-auto md:mx-0"
               style={{ fontSize: 'var(--fluid-xl)' }}
             >
               Bar di montagna ai piedi della Presolana — dove il tempo rallenta
             </p>
 
-            <div className="flex flex-wrap gap-4 md:gap-8 items-center">
+            <div className="flex flex-col md:flex-row flex-wrap gap-4 md:gap-8 items-center justify-center md:justify-start">
               <motion.a
                 href="#contatti"
                 onClick={(e) => { e.preventDefault(); scrollTo('#contatti') }}
@@ -531,7 +531,7 @@ function App() {
                 Vieni a trovarci
               </motion.a>
 
-              <div className="text-white/60 text-sm uppercase tracking-widest">
+              <div className="text-white/60 text-sm uppercase tracking-widest text-center md:text-left">
                 <span className="block">Colere (BG)</span>
                 <span className="block">1.020m s.l.m.</span>
               </div>
@@ -764,7 +764,7 @@ function App() {
         </div>
 
         <div className="relative z-10 h-full grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center px-6 md:px-12 lg:px-24 py-24 md:py-32">
-          <div className="presolana-text flex flex-col justify-center">
+          <div className="presolana-text flex flex-col justify-center text-center lg:text-left">
             <h2
               className="font-heading font-bold text-white leading-[0.9] mb-6"
               style={{ fontSize: 'var(--fluid-hero)' }}
@@ -772,11 +772,11 @@ function App() {
               Colere<br/>
               <span className="text-stroke">Infinite Mountain</span>
             </h2>
-            <p className="text-white/80 max-w-xl mb-8" style={{ fontSize: 'var(--fluid-xl)' }}>
+            <p className="text-white/80 max-w-xl mb-8 mx-auto lg:mx-0" style={{ fontSize: 'var(--fluid-xl)' }}>
               La ski area più moderna della bergamasca. 25 km di piste dai 1.000 ai 2.200 metri.
               Vista mozzafiato sulla Presolana, la "Regina delle Orobie".
             </p>
-            <div className="flex flex-wrap gap-4 text-white/60 text-sm">
+            <div className="flex flex-wrap gap-4 text-white/60 text-sm justify-center lg:justify-start">
               <span className="border border-white/30 px-4 py-2">60 km da Bergamo</span>
               <span className="border border-white/30 px-4 py-2">100 km da Milano</span>
               <span className="border border-white/30 px-4 py-2">1.000 - 2.200 m</span>
@@ -902,7 +902,7 @@ function App() {
       {/* Contatti Section - Split */}
       <section ref={contattiRef} id="contatti" className="bg-[var(--marrone-legno)] py-24 md:py-40 overflow-hidden">
         <div className="grid grid-cols-1 lg:grid-cols-2">
-          <div className="contatti-content px-6 md:px-12 lg:px-24 py-12 flex flex-col justify-center">
+          <div className="contatti-content px-6 md:px-12 lg:px-24 py-12 flex flex-col justify-center text-center lg:text-left">
             <h2
               className="font-heading font-bold text-white leading-[0.95] mb-16"
               style={{ fontSize: 'var(--fluid-4xl)' }}
@@ -939,7 +939,7 @@ function App() {
 
               <div>
                 <h3 className="text-white/60 text-sm uppercase tracking-wider mb-3">Social</h3>
-                <div className="flex gap-4">
+                <div className="flex gap-4 justify-center lg:justify-start">
                   <motion.a
                     href="https://www.facebook.com/barulbarachi/"
                     target="_blank"
