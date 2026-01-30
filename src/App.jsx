@@ -569,7 +569,7 @@ function App() {
       <section ref={introRef} id="chi-siamo" className="py-24 md:py-40 px-6 md:px-12 lg:px-24 overflow-hidden">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-4">
           {/* Title - spans columns irregularly */}
-          <div className="lg:col-span-7 lg:col-start-1">
+          <div className="lg:col-span-7 lg:col-start-1 text-center lg:text-left">
             <h2
               className="intro-title font-heading font-bold text-[var(--grigio-scuro)] leading-[0.95] mb-8"
               style={{ fontSize: 'var(--fluid-4xl)' }}
@@ -596,7 +596,7 @@ function App() {
           </div>
 
           {/* Text - opposite side, lower */}
-          <div className="lg:col-span-5 lg:col-start-1 lg:-mt-40">
+          <div className="lg:col-span-5 lg:col-start-1 lg:-mt-40 text-center lg:text-left">
             <p className="intro-text text-[var(--grigio-medio)] leading-relaxed mb-6" style={{ fontSize: 'var(--fluid-lg)' }}>
               Un caratteristico baretto di montagna nel cuore di Colere,
               proprio sotto la maestosa Presolana. La struttura interamente
@@ -634,13 +634,13 @@ function App() {
 
       {/* Servizi Section - Scattered Layout */}
       <section ref={serviziRef} id="servizi" className="bg-[var(--quasi-nero)] py-24 md:py-40 overflow-hidden">
-        <div className="px-6 md:px-12 lg:px-24 mb-16 md:mb-24">
+        <div className="px-6 md:px-12 lg:px-24 mb-16 md:mb-24 text-center md:text-left">
           <h2
             className="font-heading font-bold text-white leading-[0.95]"
             style={{ fontSize: 'var(--fluid-3xl)' }}
           >
             Cosa<br/>
-            <span className="text-stroke text-[var(--legno-chiaro)] ml-12 md:ml-24">offriamo</span>
+            <span className="text-stroke text-[var(--legno-chiaro)] md:ml-24">offriamo</span>
           </h2>
         </div>
 
@@ -668,7 +668,7 @@ function App() {
 
         {/* Extra services - horizontal scroll on mobile */}
         <div className="mt-16 md:mt-24 px-6 md:px-12 lg:px-24">
-          <div className="flex flex-wrap gap-3 md:gap-4">
+          <div className="flex flex-wrap gap-3 md:gap-4 justify-center md:justify-start">
             {['Parcheggio gratuito', 'Accessibile', 'Carte & NFC', 'Cani ammessi', 'WiFi'].map((service, i) => (
               <span
                 key={i}
@@ -684,7 +684,7 @@ function App() {
       {/* Sport Section - Cinematic */}
       <section ref={sportRef} id="sport" className="py-24 md:py-40 px-6 md:px-12 lg:px-24 bg-[var(--verde-bosco)] overflow-hidden">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24">
-          <div>
+          <div className="text-center lg:text-left">
             <h2
               className="sport-title font-heading font-bold text-white leading-[0.9] mb-8 md:mb-12"
               style={{ fontSize: 'var(--fluid-4xl)' }}
@@ -693,7 +693,7 @@ function App() {
               <span className="text-[var(--legno-chiaro)]">anche sport!</span>
             </h2>
 
-            <p className="text-white/80 mb-12 max-w-lg" style={{ fontSize: 'var(--fluid-lg)' }}>
+            <p className="text-white/80 mb-12 max-w-lg mx-auto lg:mx-0" style={{ fontSize: 'var(--fluid-lg)' }}>
               Siamo proprio accanto al campo sportivo di Colere. Il posto perfetto per
               una pausa rinfrescante dopo l'attività fisica.
             </p>
@@ -802,7 +802,7 @@ function App() {
       {/* Recensioni Section - Editorial Style */}
       <section ref={recensioniRef} id="recensioni" className="py-24 md:py-40 overflow-hidden bg-[var(--quasi-nero)]">
         <div className="px-6 md:px-12 lg:px-24 mb-20 md:mb-32">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end text-center lg:text-left">
             <div className="lg:col-span-8">
               <p className="text-[var(--arancione-caldo)] text-sm uppercase tracking-[0.2em] mb-4">Testimonianze</p>
               <h2
@@ -815,7 +815,7 @@ function App() {
             </div>
             <div className="lg:col-span-4 lg:text-right">
               <div className="inline-flex items-baseline gap-2">
-                <span className="text-7xl md:text-8xl font-heading font-bold text-white">4.4</span>
+                <span className="text-5xl md:text-8xl font-heading font-bold text-white">4.4</span>
                 <span className="text-white/40 text-xl">/5</span>
               </div>
               <p className="text-white/50 text-sm mt-2">84+ recensioni su Google</p>
@@ -825,8 +825,8 @@ function App() {
 
         {/* Featured Review - Large */}
         <div className="px-6 md:px-12 lg:px-24 mb-16">
-          <div className="recensione-card relative">
-            <div className="absolute -top-8 left-0 text-[12rem] md:text-[16rem] font-heading font-bold text-white/5 leading-none select-none pointer-events-none">
+          <div className="recensione-card relative text-center lg:text-left">
+            <div className="absolute -top-8 left-0 lg:left-0 right-0 lg:right-auto text-[8rem] md:text-[16rem] font-heading font-bold text-white/5 leading-none select-none pointer-events-none">
               "
             </div>
             <blockquote className="relative z-10">
@@ -837,7 +837,7 @@ function App() {
                 Proprietaria gentilissima, luogo rilassante con vista su parco e montagna.
                 Caffè e croissant in relax al sole!
               </p>
-              <footer className="flex items-center gap-4">
+              <footer className="flex items-center gap-4 justify-center lg:justify-start">
                 <div className="w-12 h-12 rounded-full bg-[var(--verde-bosco)] flex items-center justify-center text-white font-heading font-bold">
                   MR
                 </div>
@@ -996,7 +996,7 @@ function App() {
 
       {/* Footer */}
       <footer className="bg-[var(--quasi-nero)] py-12 md:py-16 px-6 md:px-12 lg:px-24">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-8 text-center md:text-left">
           <div>
             <h3 className="font-heading font-bold text-[var(--legno-chiaro)] text-2xl mb-2">Ul Barachì</h3>
             <p className="text-white/40 text-sm">Bar di montagna · Colere (BG)</p>

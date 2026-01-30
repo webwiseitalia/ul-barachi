@@ -22,7 +22,18 @@
   --fluid-3xl: clamp(2rem, 1rem + 5vw, 4rem);
   --fluid-4xl: clamp(2.5rem, 1rem + 7.5vw, 6rem);
   --fluid-5xl: clamp(3rem, 1rem + 10vw, 8rem);
-  --fluid-hero: clamp(3.5rem, 1rem + 15vw, 12rem);
+  --fluid-hero: clamp(2.5rem, 1rem + 12vw, 12rem);
+}
+
+/* Mobile adjustments */
+@media (max-width: 640px) {
+  :root {
+    --fluid-hero: clamp(2rem, 10vw, 4rem);
+    --fluid-4xl: clamp(1.75rem, 8vw, 3rem);
+    --fluid-3xl: clamp(1.5rem, 6vw, 2.5rem);
+    --fluid-2xl: clamp(1.25rem, 5vw, 2rem);
+    --fluid-xl: clamp(1rem, 4vw, 1.5rem);
+  }
 }
 
 * {
